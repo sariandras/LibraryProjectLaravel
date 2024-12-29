@@ -1,0 +1,20 @@
+.book-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.book-header {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.book-info {
+    line-height: 1.6;
+}
+
+.book-description {
+    font-style: italic;
+    margin-top: 15px;
+}

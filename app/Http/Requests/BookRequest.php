@@ -20,7 +20,7 @@ class BookRequest extends FormRequest
             'genre'=>'required|string|max:100',
             'publication_year'=>'required',
             'isbn'=>'required|string|max:20',
-            'pages'=>'required|min:1',
+            'pages'=>'required|min:1|numeric',
             'language'=>'required|string|max:50',
             'publisher'=>'required|string|max:255'
         ];

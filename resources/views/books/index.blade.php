@@ -1,11 +1,8 @@
 <x-layout>
-    <h1>Available books</h1>
-    <form action="/books/create" method="GET">
-        <button class="btn btn-success float-right">New book</button>
-    </form>
+    <h1 class="text-center">Available books</h1>
     <div class="row">
         @foreach ($books as $book)
-        <div class="card mx-2 my-2" style="width: 18rem;">
+        <div class="card mx-2 my-2 opacity-70" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title">{{$book->title}}</h5>
               <p class="card-text">Genre: {{$book->genre}}</p>

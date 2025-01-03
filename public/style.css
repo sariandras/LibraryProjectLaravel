@@ -1,20 +1,15 @@
-.book-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
 
-.book-header {
+/* .book-header {
     border-bottom: 2px solid #007bff;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
+} */
+body{
+    background-image: url('/images/back.jpg');
+}
+input[type="text"],input[type="number"]{
+    opacity: 0.85;
 }
 
-.book-info {
-    line-height: 1.6;
-}
-
-.book-description {
-    font-style: italic;
-    margin-top: 15px;
+.my-p-design{
+ margin-bottom: 3px;
+ font-size: 1.5rem;
 }

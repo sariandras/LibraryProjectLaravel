@@ -1,12 +1,11 @@
 <?php
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
-
+    // ini_set('display_errors', 1);
+    // ini_set('display_startup_errors', 1);
+    // error_reporting(E_ALL);
 ?>
 
 <x-layout>
-    <h1>New book</h1>
+    <h1 class="text-center">New book</h1>
     <form method="POST" action="/books">
         @csrf
         @method('POST')
@@ -47,7 +46,7 @@
         </div>
         <div class="mb-3">
             <label for="pages" class="form-label">Pages:</label>
-            <input type="number" class="form-control @error('pages') is-invalid @enderror" id="pages" name="pages" value="{{old('pages')}}"/>
+            <input type="number" min="1" class="form-control @error('pages') is-invalid @enderror" id="pages" name="pages" value="{{old('pages')}}"/>
             @error('pages')
                 <div class="invalid-feedback">{{$message}}</div>
             @enderror
@@ -59,13 +58,6 @@
                 <div class="invalid-feedback">{{$message}}</div>
             @enderror
         </div>
-        {{-- <div class="mb-3">
-            <label for="price" class="form-label">Price:</label>
-            <input type="number" class="form-control @error('price') is-invalid @enderror" min="0" id="price" name="price" value="{{old('price')}}"/>
-            @error('price')
-                <div class="invalid-feedback">{{$message}}</div>
-            @enderror
-        </div> --}}
         <div class="mb-3">
             <label for="publisher" class="form-label">Publisher:</label>
             <input type="text" class="form-control @error('publisher') is-invalid @enderror" id="publisher" name="publisher" value="{{old('publisher')}}"/>
@@ -73,7 +65,9 @@
                 <div class="invalid-feedback">{{$message}}</div>
             @enderror
         </div>
-        <button class="btn btn-success" type="submit">Store new book</button>
+        <div class="buttons d-flex justify-content-center">
+            <button class="btn btn-success" type="submit">Add new book</button>
+        </div>
     </form>
 
 </x-layout>

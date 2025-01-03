@@ -40,7 +40,7 @@
         </div>
         <div class="mb-3">
             <label for="pages" class="form-label">Pages:</label>
-            <input type="number" class="form-control @error('pages') is-invalid @enderror" id="pages" name="pages" value="{{old('pages') ?? $book->pages}}"/>
+            <input type="number" min="1" class="form-control @error('pages') is-invalid @enderror" id="pages" name="pages" value="{{old('pages') ?? $book->pages}}"/>
             @error('pages')
                 <div class="invalid-feedback">{{$message}}</div>
             @enderror
@@ -52,13 +52,6 @@
                 <div class="invalid-feedback">{{$message}}</div>
             @enderror
         </div>
-        {{-- <div class="mb-3">
-            <label for="price" class="form-label">Price:</label>
-            <input type="number" class="form-control @error('price') is-invalid @enderror" min="0" id="price" name="price" value="{{old('price')?? $book->price}}"/>
-            @error('price')
-                <div class="invalid-feedback">{{$message}}</div>
-            @enderror
-        </div> --}}
         <div class="mb-3">
             <label for="publisher" class="form-label">Publisher:</label>
             <input type="text" class="form-control @error('publisher') is-invalid @enderror" id="publisher" name="publisher" value="{{old('publisher') ?? $book->publisher}}"/>
@@ -66,7 +59,9 @@
                 <div class="invalid-feedback">{{$message}}</div>
             @enderror
         </div>
-        <button class="btn btn-success" type="submit">Edit</button>
+        <div class="buttons d-flex justify-content-center">
+            <button class="btn btn-success" type="submit">Edit</button>
+        </div>
     </form>
 
 </x-layout>
